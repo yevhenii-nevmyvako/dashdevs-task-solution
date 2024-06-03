@@ -18,7 +18,7 @@ def save_result_to_json(result_data: int, dst_filepath: str) -> None:
     os.makedirs(directory, exist_ok=True)
 
     with open(dst_filepath, 'w') as f:
-        json.dump({"equilibrium_index": result_data}, f, indent=2)
+        json.dump({'equilibrium_index': result_data}, f, indent=2)
 
 
 def find_index(arr: list) -> int:
@@ -27,13 +27,11 @@ def find_index(arr: list) -> int:
     Args:
         arr: Input list integers.
 
-
     Returns:
         Equilibrium index, or (-1) if it's not in the list.
 
     """
     validate_input_arr(arr)
-
     total_sum = sum(arr)
     left_sum = 0
 

@@ -29,7 +29,7 @@ def validate_all_elements_is_integer(arr: list) -> NoReturn:
         raise ValueError('All array elements must be integers.')
 
 
-def validate_file_extension(dst_filepath: str):
+def validate_file_extension(dst_filepath: str) -> NoReturn:
     """Validates extensions for json file"""
     if os.path.splitext(dst_filepath)[1] != _JSON:
         raise ValueError('Extension file must be only `.json`')

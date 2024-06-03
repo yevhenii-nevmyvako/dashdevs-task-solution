@@ -25,10 +25,10 @@ def find_equilibrium_index_cli(numbers: str, dst_filepath: Optional[str] = None)
     if dst_filepath:
         validate_file_extension(dst_filepath)
         save_result_to_json(result, dst_filepath)
-        click.echo(f"The result has been saved to {dst_filepath}.")
+        click.echo(f'The result has been saved to {dst_filepath}.')
     else:
-        click.echo(f"The equilibrium index is {result}.")
+        click.echo(f'The equilibrium index is {result}.')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     find_equilibrium_index_cli()
