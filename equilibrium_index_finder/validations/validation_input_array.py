@@ -1,4 +1,7 @@
+import os.path
 from typing import NoReturn
+
+_JSON = '.json'
 
 
 def validate_input_arr(arr) -> None:
@@ -24,3 +27,9 @@ def validate_all_elements_is_integer(arr: list) -> NoReturn:
     """Validates that all elements is integer."""
     if not all(isinstance(x, int) for x in arr):
         raise ValueError('All array elements must be integers.')
+
+
+def validate_file_extension(dst_filepath: str):
+    """Validates extensions for json file"""
+    if os.path.splitext(dst_filepath)[1] != _JSON:
+        raise ValueError('Extension file must be only `.json`')

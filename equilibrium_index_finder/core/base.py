@@ -1,4 +1,5 @@
 import json
+import os
 
 from equilibrium_index_finder.validations.validation_input_array import validate_input_arr
 
@@ -13,6 +14,8 @@ def save_result_to_json(result_data: int, dst_filepath: str) -> None:
         dst_filepath: Path to destination file.
 
     """
+    directory = os.path.dirname(dst_filepath)
+    os.makedirs(directory, exist_ok=True)
 
     with open(dst_filepath, 'w') as f:
         json.dump({"equilibrium_index": result_data}, f, indent=2)
