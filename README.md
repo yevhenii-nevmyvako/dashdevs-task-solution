@@ -18,6 +18,7 @@ git clone git@github.com:yevhenii-nevmyvako/dashdevs-task-solution.git
 
 Install requirements & setup the project:
 ```bash
+python -m venv venv
 pip install -e .
 ```
 
